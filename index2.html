@@ -1,0 +1,661 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="Запись на игру">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+function setElement()
+{
+	var w = $('#sb-site').width();
+	var wdt = w+'px';
+	$('#sb-site').css('width',wdt);
+}
+$('document').ready(function(){
+ $('#to-accept-repson').click(function(){
+			 var newWin = window.open("about:blank", "info", "width=400,height=500");
+ });
+$('.list-no-act').click(function(){
+		 if($(this).hasClass( "list-no-act" )){
+				notif({
+			msg: "Выберите день",
+			type: "success",
+			position: "center",
+							 autohide: true,
+							bgcolor: "rgb(221, 227, 232)",
+							color: "#111;",
+							opacity: 1.0,
+							width: 280,
+							height: 31,
+							timeout: 1500,
+							fade: true
+		});
+		}
+});
+	$('.cell_brone').click(function(){
+				notif({
+			msg: "Выберите свободный (зеленый) день",
+			type: "success",
+			position: "center",
+							 autohide: true,
+							bgcolor: "rgb(221, 227, 232)",
+							color: "#111;",
+							opacity: 1.0,
+							width: 280,
+							height: 31,
+							timeout: 1500,
+							fade: true
+		});
+});
+setElement();
+// Custom Navigation Events
+$(".customNavigation .next").click(function(){
+	owl.trigger('next.owl');
+})
+$(".customNavigation .prev").click(function(){
+	 owl.trigger('prev.owl');
+})
+$("#formpayfQUI2cXH4Dgq0dKCZe input[type=radio]").on('change', function(){
+	 var pp_type = $(this).val();
+	 if(pp_type=='PC' || pp_type=='AC'){
+				 $('#send-to-pay').show();
+				 $('#a-to-cashpay').hide();
+	 }
+	 if(pp_type=='CASH'){
+				 $('#send-to-pay').hide();
+				 $('#a-to-cashpay').show();
+	 }
+});
+var isFramed = false;
+try {
+	isFramed = window != window.top || document != top.document || self.location != top.location;
+} catch (e) {
+isFramed = true;
+}
+if (isFramed) {
+$('#frflag').text('страница загружена во фрейме');
+/* страница загружена во фрейме */
+} else {
+$('#frflag').text('страница загружена в основном окне');
+/* страница загружена в основном окне */
+}
+});
+</script>
+
+<body marginwidth="0" marginheight="0">
+<div id="sb-site" class="container">
+<div style="display:none;" id="frflag">страница загружена во фрейме</div>
+	 <div style="position:relative;">
+		<div>
+			 <div class="box-calendar">
+			 <div class="des-calendar-top">
+							 Выберите свободный день месяца			   </div>
+							 <div id="box-calendar-view">
+								 <div class="customNavigation" style="position: absolute;right: 14px;top: 4px; z-index: 999;">
+									 <a class="btn next" style="cursor: pointer;"><img src="/images/m-n.png" style="height: 18px;opacity: .6;"></a>
+								 </div>
+								 <div class="customNavigation" style="position: absolute;left: 14px;top: 4px;z-index: 999;">
+									 <a class="btn prev" style="cursor: pointer;"><img src="/images/m-l.png" style="height: 18px;opacity: .6;"></a>
+								 </div>
+								 <ul id="list-calendar-month" class="rowcal">
+								<div class="owl-item">
+									<li style="margin:auto;">
+										<div>
+											<div class="m_name" id="cur_mont">Май 2018</div>
+											<ul class="list-name-week">
+												<li>пн</li>
+												<li>вт</li>
+												<li>ср</li>
+												<li>чт</li>
+												<li>пт</li>
+												<li>сб</li>
+												<li>вс</li>
+											</ul>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_noempty cell_past " week_vt="">1</div>
+											<div class="cell_cal cell_noempty cell_past " week_sr="">2</div>
+											<div class="cell_cal cell_noempty cell_past " week_ch="">3</div>
+											<div class="cell_cal cell_noempty cell_past " week_pt="">4</div>
+											<div class="cell_cal cell_noempty cell_past " week_sb="">5</div>
+											<div class="cell_cal cell_noempty cell_past " week_vs="">6</div>
+											<div style="clear:both;"></div>
+											<div class="cell_cal cell_noempty cell_past " week_pn="">7</div>
+											<div class="cell_cal cell_noempty cell_past " week_vt="">8</div>
+											<div class="cell_cal cell_noempty cell_past " week_sr="">9</div>
+											<div class="cell_cal cell_noempty cell_past " week_ch="">10</div>
+											<div class="cell_cal cell_noempty cell_past " week_pt="">11</div>
+											<div class="cell_nobrone cell_cal cell_noempty   week_sb" id="cell_today">12<input type="hidden" value="12.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">13<input type="hidden" value="13.05.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">14<input type="hidden" value="14.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">15<input type="hidden" value="15.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">16<input type="hidden" value="16.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">17<input type="hidden" value="17.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">18<input type="hidden" value="18.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">19<input type="hidden" value="19.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">20<input type="hidden" value="20.05.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">21<input type="hidden" value="21.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">22<input type="hidden" value="22.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">23<input type="hidden" value="23.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">24<input type="hidden" value="24.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">25<input type="hidden" value="25.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">26<input type="hidden" value="26.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">27<input type="hidden" value="27.05.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">28<input type="hidden" value="28.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">29<input type="hidden" value="29.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">30<input type="hidden" value="30.05.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">31<input type="hidden" value="31.05.2018"></div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div style="clear:both;"></div>
+										</div>
+									</li>
+								</div>
+								<div class="owl-item">
+									<li style="margin:auto;">
+										<div>
+											<div class="m_name">Июнь 2018</div>
+											<ul class="list-name-week">
+												<li>пн</li>
+												<li>вт</li>
+												<li>ср</li>
+												<li>чт</li>
+												<li>пт</li>
+												<li>сб</li>
+												<li>вс</li>
+											</ul>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone week_pt">1<input type="hidden" value="1.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone week_sb">2<input type="hidden" value="2.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone week_vs">3<input type="hidden" value="3.06.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">4<input type="hidden" value="4.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">5<input type="hidden" value="5.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">6<input type="hidden" value="6.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">7<input type="hidden" value="7.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">8<input type="hidden" value="8.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">9<input type="hidden" value="9.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">10<input type="hidden" value="10.06.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">11<input type="hidden" value="11.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">12<input type="hidden" value="12.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">13<input type="hidden" value="13.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">14<input type="hidden" value="14.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">15<input type="hidden" value="15.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">16<input type="hidden" value="16.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">17<input type="hidden" value="17.06.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">18<input type="hidden" value="18.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">19<input type="hidden" value="19.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">20<input type="hidden" value="20.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">21<input type="hidden" value="21.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">22<input type="hidden" value="22.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">23<input type="hidden" value="23.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">24<input type="hidden" value="24.06.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">25<input type="hidden" value="25.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">26<input type="hidden" value="26.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">27<input type="hidden" value="27.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">28<input type="hidden" value="28.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">29<input type="hidden" value="29.06.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">30<input type="hidden" value="30.06.2018"></div>
+											<div class="cell_cal cell_empty">x</div>
+											<div style="clear:both;"></div>
+										</div>
+									</li>
+								</div>
+								<div class="owl-item">
+									<li style="margin:auto;">
+										<div>
+											<div class="m_name">Июль 2018</div>
+											<ul class="list-name-week">
+												<li>пн</li>
+												<li>вт</li>
+												<li>ср</li>
+												<li>чт</li>
+												<li>пт</li>
+												<li>сб</li>
+												<li>вс</li>
+											</ul>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone week_vs">1<input type="hidden" value="1.07.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">2<input type="hidden" value="2.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">3<input type="hidden" value="3.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">4<input type="hidden" value="4.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">5<input type="hidden" value="5.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">6<input type="hidden" value="6.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">7<input type="hidden" value="7.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">8<input type="hidden" value="8.07.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">9<input type="hidden" value="9.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">10<input type="hidden" value="10.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">11<input type="hidden" value="11.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">12<input type="hidden" value="12.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">13<input type="hidden" value="13.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">14<input type="hidden" value="14.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">15<input type="hidden" value="15.07.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">16<input type="hidden" value="16.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">17<input type="hidden" value="17.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">18<input type="hidden" value="18.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">19<input type="hidden" value="19.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">20<input type="hidden" value="20.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">21<input type="hidden" value="21.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">22<input type="hidden" value="22.07.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">23<input type="hidden" value="23.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">24<input type="hidden" value="24.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sr">25<input type="hidden" value="25.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_ch">26<input type="hidden" value="26.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pt">27<input type="hidden" value="27.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_sb">28<input type="hidden" value="28.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_brone  week_vs">29<input type="hidden" value="29.07.2018"></div>
+											<div style="clear:both;"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_pn">30<input type="hidden" value="30.07.2018"></div>
+											<div class=" cell_cal cell_noempty cell_future cell_nobrone  week_vt">31<input type="hidden" value="31.07.2018"></div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div class="cell_cal cell_empty">x</div>
+											<div style="clear:both;"></div>
+										</div>
+									</li>
+								</div>
+						 </ul>
+							 </div>
+			 </div>
+			</div>
+			<div class="box-dop">
+			 <div id="panel-vrem-vac">
+				 <div id="gifka"><!-- <img src='/images/loader.GIF' /> --> </div>
+									 <input type="hidden" id="system_timer_type" value="1">
+				 <input type="hidden" id="system_timer_left" value="9">
+				 <input type="hidden" id="system_timer_right" value="17">
+					 <div id="panel-vac_val"><b>2.</b>
+											Выберите свободное время. Всего записей: 12
+					 </div>
+					 <ul id="list-timer" class="list-no-act">
+										 <li id="time-is-7884" class="timer-no-brone it_early is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">10:30 - 11:30<input type="hidden" value="7884"><span class="pod_text">500 руб</span></li><li id="time-is-7885" class="timer-no-brone it_early is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">11:30 - 12:30<input type="hidden" value="7885"><span class="pod_text">500 руб</span></li><li id="time-is-7886" class="timer-no-brone it_early is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">12:30 - 13:30<input type="hidden" value="7886"><span class="pod_text">500 руб</span></li><li id="time-is-7887" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">13:30 - 14:30<input type="hidden" value="7887"><span class="pod_text">500 руб</span></li><li id="time-is-7888" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">14:30 - 15:30<input type="hidden" value="7888"><span class="pod_text">500 руб</span></li><li id="time-is-7889" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">16:30 - 17:30<input type="hidden" value="7889"><span class="pod_text">500 руб</span></li><li id="time-is-7890" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">17:30 - 18:30<input type="hidden" value="7890"><span class="pod_text">800 руб</span></li><li id="time-is-7891" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">18:30 - 19:30<input type="hidden" value="7891"><span class="pod_text">800 руб</span></li><li id="time-is-7892" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">19:30 - 20:30<input type="hidden" value="7892"><span class="pod_text">800 руб</span></li><li id="time-is-7893" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">20:30 - 21:30<input type="hidden" value="7893"><span class="pod_text">900 руб</span></li><li id="time-is-7894" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">21:30 - 22:30<input type="hidden" value="7894"><span class="pod_text">1 200 руб</span></li><li id="time-is-7895" class="timer-no-brone  is_pn is_vt is_sr is_ch is_pt is_sb is_vs " onclick="" style="cursor: pointer;">22:30 - 23:30<input type="hidden" value="7895"><span class="pod_text">1200 руб</span></li>                      					 </ul>
+						 </div>
+	</div>
+<input type="hidden" value="0" id="amount-my-brone">
+		<div id="bottom-box">
+	<div id="panel-contactus">
+		 <div>
+	 <input type="hidden" id="sys_timeoff" value="1">
+	 <input type="hidden" id="sys_timezone" value="3">
+	<form style="text-align:center;" id="rentact-form_fQUI2cXH4Dgq0dKCZe" action="https://hesus.ru/hesus/visor/id/fQUI2cXH4Dgq0dKCZe" method="post">
+										 <div class="des-calendar-top" style="padding-left: 5px;">
+							<b style="font-family: 'Hesusb';">3.</b> Укажите информацию для связи с Вами
+					 </div>
+							 <div id="left-form-part">
+				 <div class="row-input">
+				<input type="hidden" id="thema_val" value="892">
+				<input class="res_brone_date" name="Rentact[days]" id="Rentact_days" type="hidden">			        <input class="res_brone_place" name="Rentact[vacant]" id="Rentact_vacant" type="hidden">					<input class="res_brone_timer" name="Rentact[timer]" id="Rentact_timer" type="hidden">
+				<input placeholder="Имя/ФИО" class="inp-contus" name="Rentact[name]" id="Rentact_name" type="text" maxlength="100">
+				 </div>
+				 <div class="row-input">
+				<input placeholder="Телефон" class="inp-contus" name="Rentact[phone]" id="Rentact_phone" type="text" maxlength="100">
+						 </div>
+																				 <div class="row-input"><input placeholder="Email" class="inp-contus" name="Rentact[email]" id="Rentact_email" type="text"></div>
+								 <div class="row-input"><select id="pole_2706" name="pole2706" placeholder="Вы у нас впервые?" class="select-contus place_holder"><option selected="selected" value="0" style="display: none;">Вы у нас впервые?</option><option style="font-family: &quot;Hesus&quot;;" value="да, первый раз">да, первый раз</option><option style="font-family: &quot;Hesus&quot;;" value="нет">нет</option></select></div>              </div>
+						<div id="right-form-part">
+							 <div class="row-input"><input type="text" id="pole_2705" name="pole2705" placeholder="Дата рождения" class="inp-contus" value=""></div><div class="row-input"><select id="pole_2707" name="pole2707" placeholder="Количество гостей" class="select-contus place_holder"><option selected="selected" value="0" style="display: none;">Количество гостей</option><option style="font-family: &quot;Hesus&quot;;" value="1">1</option><option style="font-family: &quot;Hesus&quot;;" value="2">2</option><option style="font-family: &quot;Hesus&quot;;" value="3">3</option><option style="font-family: &quot;Hesus&quot;;" value="больше 3">больше 3</option></select></div>
+							 <div style="display:none;">
+							 <div class="names-right-form-day">День</div><div class="names-right-form-time">Время</div><div style="clear:both;"></div>
+							 <div id="vacant-res-info">
+				 <div id="vacant-res-date">
+					 <ul id="list-choise-date"></ul>
+			 </div>
+			 <div id="vacant-res-place">
+										 <ul id="list-choise-timer">
+				 </ul>
+								 </div>
+			 <div style="clear:both;"></div>
+		 </div>
+					 <div style="clear:both;"></div>
+			 </div>
+												<div style="display:none;">
+			gyvi       </div>
+								 <div class="row-input" id="bx-check-sog">
+								 <label for="chsogl"><input type="checkbox" id="chsogl" name="chsogl">
+																						<span>Согласен на обработку <a id="to-accept-repson">персональных данных</a></span>
+																		 </label>
+								 </div>
+								 <div class="row-input" style="height: 45px;margin-top: 5px;">
+				 <input class="brone-button" id="book-button-2fQUI2cXH4Dgq0dKCZe" type="submit" name="yt0" value="Записаться">				   <span style="display:none;">0</span>
+				 </div>
+						</div>
+			<div style="clear:both;"></div>
+		</form>
+			 </div>
+		 </div>   <!-- end box contacts -->
+		 <div style="clear:both;"></div>
+		</div>
+	 </div>
+	</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$('#phone-saler').click(function(){
+			$('#phone-saler').hide();
+	$('#gifka2').show().delay(1000).queue(function (){
+		 $(this).hide();
+		 $('#number-phone-img').show();
+	});
+});
+ function display_pay_disable(){  $('#all-amount-my-brone').text(0); }  // Обнуляем стоимость брони
+ function display_pay_time_1(value){                                    // Обнуляем стоимость брони если value=0, устанавливаем в установленное если value=1
+		 var myAmountBrone = $('#amount-my-brone').val();
+		 if(myAmountBrone!=0){
+				if(value == 0){ $('#all-amount-my-brone').text(0); } else {   $('#all-amount-my-brone').text(myAmountBrone);  }
+		 }
+ }
+ function display_pay_time_2(value){                                    // При множественном выборе дня/времени/мест управляем стоимостью
+		 var myAmountBrone = $('#amount-my-brone').val();
+		 if(myAmountBrone!=0){
+				if(value != ''){
+				var arr = value.split(',');
+				var n = arr.length;
+				var minusN = n-1;
+					var summCost = minusN*parseInt(myAmountBrone);
+					$('#all-amount-my-brone').text(summCost);
+			} else {   $('#all-amount-my-brone').text(0);  }
+		 }
+ }
+ function display_places(value){
+	 $('#list-choise-place li').remove();
+	 if(value != ''){
+	 var arr = value.split(',');
+	 var n = arr.length;
+	 for(var t=0;t<n-1;t++){
+		 $('#list-choise-place').append('<li>'+arr[t]+'</li>');
+	 }
+ }
+ display_pay_time_2(value);
+ }
+ function display_time(value){
+ var typeTimer = $('#system_timer_type').val();
+ if(typeTimer==15) {
+	var arrt = [  '00:00', '00:15','00:30','00:45','01:00', '01:15','01:30','01:45','02:00', '02:15','02:30','02:45','03:00', '03:15','03:30','03:45','04:00', '04:15','04:30','04:45','05:00', '05:15','05:30','05:45','06:00', '06:15','06:30','06:45','07:00', '07:15','07:30','07:45','08:00', '08:15','08:30','08:45','09:00', '09:15','09:30','09:45','10:00', '10:15','10:30','10:45','11:00', '11:15','11:30','11:45','12:00', '12:15','12:30','12:45','13:00', '13:15','13:30','13:45','14:00', '14:15','14:30','14:45','15:00', '15:15','15:30','15:45','16:00', '16:15','16:30','16:45','17:00', '17:15','17:30','17:45','18:00', '18:15','18:30','18:45','19:00', '19:15','19:30','19:45','20:00', '20:15','20:30','20:45','21:00', '21:15','21:30','21:45','22:00', '22:15','22:30','22:45','23:00', '23:15','23:30','23:45','24:00'	];
+	 }
+ if(typeTimer==20) {
+	var arrt = [ '00:00', '00:20','00:40','01:00', '01:20','01:40','02:00', '02:20','02:40','03:00', '03:20','03:40','04:00', '04:20','04:40','05:00', '05:20','05:40','06:00', '06:20','06:40','07:00', '07:20','07:40','08:00', '08:20','08:40','09:00', '09:20','09:40','10:00', '10:20','10:40','11:00', '11:20','11:40','12:00', '12:20','12:40','13:00', '13:20','13:40','14:00', '14:20','14:40','15:00', '15:20','15:40','16:00', '16:20','16:40','17:00', '17:20','17:40','18:00', '18:20','18:40','19:00', '19:20','19:40','20:00', '20:20','20:40','21:00', '21:20','21:40','22:00', '22:20','22:40','23:00', '23:20','23:40','24:00'];
+	 }
+ if(typeTimer==30) {
+	var arrt = ['00:00', '00:30','01:00', '01:30','02:00', '02:30','03:00', '03:30','04:00', '04:30','05:00', '05:30','06:00', '06:30', '07:00', '07:30','08:00', '08:30','09:00', '09:30','10:00', '10:30','11:00', '11:30','12:00', '12:30','13:00', '13:30','14:00', '14:30','15:00', '15:30','16:00', '16:30','17:00', '17:30','18:00', '18:30','19:00', '19:30','20:00', '20:30','21:00', '21:30','22:00', '22:30','23:00', '23:30','24:00'];
+	 }
+ if(typeTimer==1) {
+	var arrt = ['00:00', '01:00','02:00', '03:00','04:00', '05:00','06:00', '07:00','08:00', '09:00','10:00', '11:00','12:00', '13:00','14:00', '15:00','16:00', '17:00','18:00', '19:00','20:00', '21:00','22:00', '23:00','24:00'];
+	 }
+ if(typeTimer==2) {
+	var arrt = ['00:00', '02:00','04:00', '06:00','08:00', '10:00','12:00', '14:00','16:00', '18:00','20:00', '22:00','24:00'];
+	 }
+	 if(typeTimer==3) {
+	var arrt = ['00:00', '03:00','06:00', '09:00','12:00', '15:00','18:00', '21:00','24:00'];
+ }
+	 $('#list-choise-timer li').remove();
+	 if(value != ''){
+	 var arr = value.split(',');
+	 var n = arr.length;
+	 for(var t=0;t<n-1;t++){
+		 var inx = parseInt(arr[t]);
+		 $('#list-choise-timer').append('<li>'+arrt[inx]+' - '+arrt[inx+1]+'</li>');
+	 }
+ }
+	 display_pay_time_2(value);
+ }
+ function monitoring_timer(time, flag){  // индикация и подгрузка свободных/занятых времен по заданной дате
+	var timer = $('#system_timer_type').val();
+var timer_l = $('#system_timer_left').val();
+var timer_r = $('#system_timer_right').val();
+if(flag==1) {  // если в выбранном дне есть забронированные тикеты
+		var arr_brone = new Array();  // массив ключей номеров забронированных временных интервалов
+	var j = 0;
+	for(var key in time) {
+						arr_brone[j] = time[key];
+			j++;
+					}
+			 var timeprofile = $('#thema_val').val();
+		if(timeprofile>1){
+					 $('#list-timer li').removeClass('timer-brone').addClass('timer-no-brone');
+					 for(var key in time) {
+						arr_brone[j] = time[key];
+			$('#time-is-'+time[key]).removeClass('timer-no-brone').addClass('timer-brone');
+					}
+		 }  else {
+	for(var i = parseInt(timer_l);i<=parseInt(timer_r);i++){
+		 var t = jQuery.inArray(i.toString(), arr_brone);
+		if(t!=-1) {
+			$('#time-is-'+i).removeClass('timer-no-brone').addClass('timer-brone');
+		}
+		else {
+					$('#time-is-'+i).removeClass('timer-brone').addClass('timer-no-brone');
+		}
+			}
+		}
+} else {   // если в выбранном дне нет забронированных тикетов
+	$('#list-timer li').removeClass('timer-brone').addClass('timer-no-brone');
+}
+ }
+ function display_my_stiker(week_day){
+			var timeprofile = $('#thema_val').val();
+		if(timeprofile>1){
+			$('#list-timer li').hide();
+			var n_stikers = 0;
+				if($(week_day).hasClass('week_pn')) { $('#list-timer').find('li.is_pn').show(); n_stikers = $('#list-timer li.is_pn').length; }
+				if($(week_day).hasClass('week_vt')) { $('#list-timer').find('li.is_vt').show(); n_stikers = $('#list-timer li.is_vt').length; }
+				if($(week_day).hasClass('week_sr')) { $('#list-timer').find('li.is_sr').show(); n_stikers = $('#list-timer li.is_sr').length; }
+				if($(week_day).hasClass('week_ch')) { $('#list-timer').find('li.is_ch').show(); n_stikers = $('#list-timer li.is_ch').length; }
+				if($(week_day).hasClass('week_pt')) { $('#list-timer').find('li.is_pt').show(); n_stikers = $('#list-timer li.is_pt').length; }
+				if($(week_day).hasClass('week_sb')) { $('#list-timer').find('li.is_sb').show(); n_stikers = $('#list-timer li.is_sb').length; }
+				if($(week_day).hasClass('week_vs')) { $('#list-timer').find('li.is_vs').show(); n_stikers = $('#list-timer li.is_vs').length; }
+				$('#panel-vac_val span').text(n_stikers);
+			}
+ }
+ function monitoring_place(place, flag){  // индикация и подгрузка свободных/занятых мест по заданной дате
+			var val_place = $('#system_vacant_val').val();
+	//$('#list-person').html('');
+		if(flag==1) {    // если есть забронированные даты
+	 var arr_brone = new Array();
+			 var j = 0;
+	 for(var key in place) {
+						arr_brone[j] = place[key];
+			j++;
+					}
+		for(var i = 1;i<=val_place;i++){
+		 var t = jQuery.inArray(i.toString(), arr_brone);
+		if(t!=-1) {
+			$('#list-person li').eq(i-1).removeClass('place-no-brone').addClass('place-brone');
+		}
+		else {
+					$('#list-person li').eq(i-1).removeClass('place-brone').addClass('place-no-brone');
+		}
+				}
+	} else {   // если нет забронированных дат
+		 for(var i = 1;i<=val_place;i++){
+					 //   $('<li id=item-person-id-'+i+' class=\'place-no-brone\'>&nbsp;</li>').appendTo('#list-person');
+			$('#list-person li').eq(i-1).removeClass('place-brone').addClass('place-no-brone');
+				}
+	}
+ }
+(function () {
+var outerOffsets = false;
+function movePopup() {
+	if (!outerOffsets) {
+		return;
+	}
+	var $message = $('#infosuccess-message > div');
+	if ($message.is(':visible')) {
+		var d = outerOffsets;
+		var visibleWidth = d.visibleRight - d.visibleLeft;
+		var visibleHeight = d.visibleBottom - d.visibleTop;
+		var msgWidth = $message.width();
+		var msgHeight = $message.height();
+		$message.css('position', 'absolute');
+		$message.css('margin', '0');
+		$message.css('left', ($("html,body").scrollLeft() + (visibleWidth - msgWidth) / 2.0 + d.visibleLeft) + 'px');
+		$message.css('top', ($("html,body").scrollTop() + (visibleHeight - msgHeight) / 2.0 + d.visibleTop) + 'px');
+	}
+}
+function processResizeMessage(evt) {
+	if (evt && evt.data && evt.data.type && evt.data.type === 'hesusRepositionPopup') {
+		outerOffsets = evt.data;
+		movePopup();
+	}
+}
+if (window.addEventListener) {
+	window.addEventListener("message", processResizeMessage, false);
+}
+else {
+	window.attachEvent("onmessage", processResizeMessage);
+}
+$(window).scroll(movePopup);
+$(document).ready(movePopup);
+$(document).load(movePopup);
+})();
+$('.cell_nobrone').click(function () {
+display_pay_disable();
+display_my_stiker($(this));
+if($(this).hasClass('cell_nobrone')) {
+	$('.timer-no-brone').removeClass('timer-active');
+	$('.timer-no-brone').removeClass('time-active');
+	$('.res_brone_timer').val('');
+	$('#list-choise-timer li').remove();
+	var tday = '12.05.2018';
+	if($(this).hasClass('cell_active'))
+	{
+		$('.res_brone_date').val('');
+	$('#vacant-res-date').text('');
+	$(this).removeClass('cell_active');
+	$('#list-timer').addClass('list-no-act');             // неактивный список
+	$('#list-timer li').removeClass('timer-no-brone');
+	$('#list-timer li').removeClass('timer-brone');
+	}
+	else
+		{
+		$('.cell_nobrone').removeClass('cell_active');
+	$(this).addClass('cell_active');
+	var date_brone = $(this).children('input').val();
+	$('.res_brone_date').val(date_brone);
+	$('#vacant-res-date').text(date_brone);
+			if(tday == date_brone){ $('#list-timer li.it_early').removeClass('timer-no-brone').addClass('it-early-slot'); }
+			else{ $('#list-timer li.it_early').removeClass('it-early-slot').addClass('timer-no-brone'); }
+	$.ajax({
+							type: 'POST',
+							url: '/hesus/getbronetimer',
+			dataType: 'json',
+			beforeSend: function(request) {
+												$('#gifka').slideDown(500);
+			},
+			data: { add : "fQUI2cXH4Dgq0dKCZe", dat : date_brone },
+							success: function(msg){
+									var time = msg.time;
+				var flag = msg.flag;
+									$('#list-timer').removeClass('list-no-act');  // неактивный список
+							$('#gifka').slideUp(400);   // удалить loader
+				monitoring_timer(msg.time, msg.flag);
+						 },
+			 'error':function() {
+				alert('Произошла ошибка!');
+						 },
+			 'cache':false
+					});
+		}
+	 }
+});
+ $('.place-no-brone').live('click', function () {
+		if(!$(this).closest('ul').hasClass('list-no-act')){
+	 $('#list-choise-place li').remove();
+	 if($(this).hasClass('place-active')) {     // снятие выделения единственного места
+	 $('.place-no-brone').removeClass('place-active');
+	 $('.res_brone_place').val('');
+	 display_pay_time_1(0);
+	 } else {                                   // выделение единственного места
+	 $('.place-no-brone').removeClass('place-active');
+	 $(this).addClass('place-active');
+	 var index = parseInt($(this).index())+1;
+	 $('.res_brone_place').val(index);
+	 $('#list-choise-place').append('<li>'+index+'</li>');
+	 display_pay_time_1(1);
+	 }
+		}
+	 });
+/* .attr('onclick','').css('cursor','pointer');  */
+	$('.timer-no-brone').live('click', function () {
+		if(!$(this).closest('ul').hasClass('list-no-act') && !$(this).hasClass('it-early-slot')){
+		$(this).toggleClass('timer-active');
+		var choises = $('.res_brone_timer').val();
+		var typeTimer = $('#system_timer_type').val();
+	if(typeTimer==15) {
+	var arr = [  '00:00', '00:15','00:30','00:45','01:00', '01:15','01:30','01:45','02:00', '02:15','02:30','02:45','03:00', '03:15','03:30','03:45','04:00', '04:15','04:30','04:45','05:00', '05:15','05:30','05:45','06:00', '06:15','06:30','06:45','07:00', '07:15','07:30','07:45','08:00', '08:15','08:30','08:45','09:00', '09:15','09:30','09:45','10:00', '10:15','10:30','10:45','11:00', '11:15','11:30','11:45','12:00', '12:15','12:30','12:45','13:00', '13:15','13:30','13:45','14:00', '14:15','14:30','14:45','15:00', '15:15','15:30','15:45','16:00', '16:15','16:30','16:45','17:00', '17:15','17:30','17:45','18:00', '18:15','18:30','18:45','19:00', '19:15','19:30','19:45','20:00', '20:15','20:30','20:45','21:00', '21:15','21:30','21:45','22:00', '22:15','22:30','22:45','23:00', '23:15','23:30','23:45','24:00'	];
+			}
+	if(typeTimer==20) {
+	var arr = [ '00:00', '00:20','00:40','01:00', '01:20','01:40','02:00', '02:20','02:40','03:00', '03:20','03:40','04:00', '04:20','04:40','05:00', '05:20','05:40','06:00', '06:20','06:40','07:00', '07:20','07:40','08:00', '08:20','08:40','09:00', '09:20','09:40','10:00', '10:20','10:40','11:00', '11:20','11:40','12:00', '12:20','12:40','13:00', '13:20','13:40','14:00', '14:20','14:40','15:00', '15:20','15:40','16:00', '16:20','16:40','17:00', '17:20','17:40','18:00', '18:20','18:40','19:00', '19:20','19:40','20:00', '20:20','20:40','21:00', '21:20','21:40','22:00', '22:20','22:40','23:00', '23:20','23:40','24:00'];
+			}
+	if(typeTimer==30) {
+	var arr = ['00:00', '00:30','01:00', '01:30','02:00', '02:30','03:00', '03:30','04:00', '04:30','05:00', '05:30','06:00', '06:30', '07:00', '07:30','08:00', '08:30','09:00', '09:30','10:00', '10:30','11:00', '11:30','12:00', '12:30','13:00', '13:30','14:00', '14:30','15:00', '15:30','16:00', '16:30','17:00', '17:30','18:00', '18:30','19:00', '19:30','20:00', '20:30','21:00', '21:30','22:00', '22:30','23:00', '23:30','24:00'];
+			}
+	if(typeTimer==1) {
+	var arr = ['00:00', '01:00','02:00', '03:00','04:00', '05:00','06:00', '07:00','08:00', '09:00','10:00', '11:00','12:00', '13:00','14:00', '15:00','16:00', '17:00','18:00', '19:00','20:00', '21:00','22:00', '23:00','24:00'];
+			}
+	if(typeTimer==2) {
+	var arr = ['00:00', '02:00','04:00', '06:00','08:00', '10:00','12:00', '14:00','16:00', '18:00','20:00', '22:00','24:00'];
+			}
+	if(typeTimer==3) {
+	var arr = ['00:00', '03:00','06:00', '09:00','12:00', '15:00','18:00', '21:00','24:00'];
+	}
+	 var timeprofile = $('#thema_val').val();
+	 if($(this).hasClass('timer-active')) {     // выделение любого незанятого времени
+			var adding = parseInt($('#system_timer_left').val());
+		var index = parseInt($(this).index());
+	var res = adding+index;
+	if(timeprofile>1){ res = $(this).find('input').val(); }
+	var all_timers = $('.res_brone_timer').val();
+	all_timers = all_timers+res+',';
+	$('.res_brone_timer').val(all_timers);
+	 } else {                                   // снятие выделения времени
+		var adding = parseInt($('#system_timer_left').val());
+		var index = parseInt($(this).index());
+	var res = adding+index;
+	if(timeprofile>1){ res = $(this).find('input').val(); }
+		var all_timers = $('.res_brone_timer').val();
+	var arr_t = all_timers.split(',');
+	 var j = 0;
+	 jQuery.each(arr_t, function() {
+					 if(res==this) { arr_t.splice(j, 1); }
+		 j++;
+			});
+			$('.res_brone_timer').val(arr_t.join(','));
+	 }
+		display_time($('.res_brone_timer').val());
+	 }
+	}).attr('onclick','').css('cursor','pointer');
+$('#rentact-form_fQUI2cXH4Dgq0dKCZe').validate(); $('#Rentact_name').rules( 'add', { required: true, messages: { required: '&nbsp;' } }); $('#Rentact_phone').rules( 'add', { required: true, messages: { required: '&nbsp;' } }); $('#chsogl').rules( 'add', { required: true, messages: { required: '' } }); $.validator.addMethod('greaterThanZero', function(value, element) { return value != 0; }, '&nbsp;');$('#pole_2706').change(function(){ $(this).removeClass('place_holder'); });$('#pole_2706').rules( 'add', { required: true, greaterThanZero: true,  messages: { required: '&nbsp;' } });$('#pole_2707').change(function(){ $(this).removeClass('place_holder'); });
+});
+/*]]>*/
+</script>
