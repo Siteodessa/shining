@@ -769,66 +769,131 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <?php
 
+/**
+ *
+ */
+class Calendar
+{
+	function show()
+	{
+
+		function Get_first_date_in_week_position($eng_days_of_week, $first_day_of_week_in_current_month)
+	 {
+		 foreach ($eng_days_of_week as $key => $value) {
+		 if ($value == $first_day_of_week_in_current_month) return $key;
+		 }
+	 }
+
+	 function PrintMonth()
+	 {
+	 		print_r(' <ul class="list-name-week"> <li>пн</li> <li>вт</li> <li>ср</li> <li>чт</li> <li>пт</li> <li>сб</li> <li>вс</li> </ul>');
+	 }
+
+	 	$number_of_days_in_month = $this -> number_of_days_in_month  = date('t');
+		$eng_days_of_week = $this -> eng_days_of_week   = array("Mon", "Tue", "Wen", "Thu", "Fri", "Sat", "Sun");
+		$rus_days_of_week  = $this -> rus_days_of_week   = array("Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс");
+		$rus_months =	$this -> rus_months   = array("январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь");
+		$eng_months =	$this -> eng_months = array("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december");
+		$current_month = $this -> current_month = date("F");
+		$current_day = $this -> current_day = date("j");
+		$current_year = $this -> current_year = date("Y");
+		$next_month = $this -> next_month =  date("F", strtotime("+1 month"));
+		$after_next_month = $this -> after_next_month =  date("F", strtotime("+2 month"));
+		$current_rus_month = $this -> current_rus_month = str_ireplace($eng_months, $rus_months, $current_month);
+		$next_rus_month = $this -> next_rus_month = str_ireplace($eng_months, $rus_months, $next_month);
+		$after_next_rus_month = $this -> after_next_rus_month = str_ireplace($eng_months, $rus_months, $after_next_month);
+		$first_day_of_current_month = $this -> first_day_of_current_month = $current_year .'-'. $current_month .'-01';
+		$first_day_of_week_in_current_month = $this -> first_day_of_week_in_current_month = strftime("%a", strtotime($first_day_of_current_month));
+		$a = $this -> a = 0;
+		$b = $this -> b = 0;
+		$c = $this -> c = 1;
+		$first_date_in_week = $this-> first_date_in_week = Get_first_date_in_week_position($eng_days_of_week, $first_day_of_week_in_current_month);
+    $dayofmonth = $this-> dayofmonth = date('t');
 
 
-$a = 0;
-$current_month = date("F");
-$current_day = date("j");
-$current_year = date("Y");
+
+		print_r('<div class="box-calendar">
+
+
+		 <div class="des-calendar-top"> Выберите свободный день месяца			   </div>
+		<div id="box-calendar-view">
+		<ul id="list-calendar-month" class="rowcal">');
+
+		while( $a < 3) {
+		print_r('<div class="owl-item">
+		<li>
+		<div>');
+
+
+		if ($a == 0)
+		{
+			print_r('<div class="month">
+			'. $current_rus_month .' '. $current_year .'
+			</div>
+		');
+			print_r(' <ul class="list-name-week"> <li>пн</li> <li>вт</li> <li>ср</li> <li>чт</li> <li>пт</li> <li>сб</li> <li>вс</li> </ul>');
+		} elseif ($a == 1)  {
+			print_r('<div class="month">
+			'. $next_rus_month .' '. $current_year .'
+			</div>
+		');
+					PrintMonth();
+		}
+		else {
+			print_r('<div class="month">
+			'. $after_next_rus_month .' '. $current_year .'
+			</div>
+		');
+			print_r(' <ul class="list-name-week"> <li>пн</li> <li>вт</li> <li>ср</li> <li>чт</li> <li>пт</li> <li>сб</li> <li>вс</li> </ul>');
+
+		}
 
 
 
-
-
-
-$healthy = array("may", "vegetables", "fiber");
-$yummy   = array("май", "beer", "ice cream");
-
-$newphrase = str_ireplace($healthy, $yummy, $current_month);
-
-echo $newphrase;
-
-
-print_r('<div class="box-calendar">
-
-
- <div class="des-calendar-top"> Выберите свободный день месяца			   </div>
-<div id="box-calendar-view">
-<ul id="list-calendar-month" class="rowcal">');
-
-while( $a < 3) {
-
-	print_r('<div class="owl-item">
-<li>
-<div>
-<div class="month">
-
-</div>
-
-<ul class="list-name-week">
-<li>пн</li>
-<li>вт</li>
-<li>ср</li>
-<li>чт</li>
-<li>пт</li>
-<li>сб</li>
-<li>вс</li>
-</ul>
-
-<div class="cell_cal cell_empty">x</div>
-
-
-</div>
-
-</li>
-	</div>');
-	$a++;
+		while ( $b < 32) {
+if ($b == $first_date_in_week){
+break;
+} else {
+	if ($b % 7 == 0){
+	print_r('<div style="clear:both;"></div><div class="cell_cal cell_empty">x</div>');
+	} else {
+	print_r('<div class="cell_cal cell_empty">x</div>');
+	}
 }
-print_r('
-</ul>
-</div>
+$b++;
+};
 
-</div>')
+
+		while ( $c < $number_of_days_in_month + 1) {
+
+			if ($b % 7 == 0){
+			print_r('<div style="clear:both;"></div><div class="cell_cal cell_past ">'. $c .'</div>');
+			} else {
+			print_r('<div class="cell_cal cell_past ">'. $c .'</div>');
+			}
+					$c++;	$b++;
+		}
+	print_r('
+		</div>
+
+		</li>
+			</div>');
+			$a++;
+		}
+		print_r('
+		</ul>
+		</div>
+
+		</div>');
+	}
+};
+
+
+$calendar = new Calendar();
+$calendar->show();
+
+
+
 
  ?>
 

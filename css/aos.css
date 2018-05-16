@@ -1331,3 +1331,40 @@ background-repeat: no-repeat;
 }
 .place-brone{ background-image: url('/images/icons/person2.png') !important; }
 .place-active{ background-image: url('/images/icons/person.png') !important; cursor:pointer; }
+
+
+div#book {
+    /* display:  none; */
+}
+
+.stats.news-w3layouts.jarallax {
+    display:  none;
+}
+
+div#pricing {
+    display:  none;
+}
+
+div#services {
+    display:  none;
+}
+
+div#about {
+    display:  none;
+}
+
+section#gallery {
+    display:  none;
+}
+
+.banner {
+    display:  none;
+}
+
+.frame {
+    display:  none;
+}
+
+div#client {
+    display:  none;
+}
