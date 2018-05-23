@@ -124,6 +124,7 @@ body{
 }
 .logo h1{
     margin: .2em 0 0 0;
+    font-size:  30px;
 }
 .logo h1 a{
     text-decoration: none;
@@ -258,6 +259,13 @@ ul.dropdown-menu {
 }
 .head {
     padding-top: 14px;
+    position:  fixed;
+    top: 0;
+    left:  0;
+    width:  100%;
+    z-index: 8;
+    background: black;
+    padding-bottom:  6px;
 }
 .slider-info h3{
         font-weight: 400;
@@ -390,13 +398,10 @@ ul.dropdown-menu {
     top: 50%;
     opacity: 0.7;
     z-index: 3;
-    text-indent: -9999px;
     overflow: hidden;
-    text-decoration: none;
-    height: 25px;
+    height: 45px;
     width: 45px;
     margin-top: 0;
-    background: #FFF;
 }
 .callbacks_nav:active {
   opacity: 1.0;
@@ -404,6 +409,7 @@ ul.dropdown-menu {
 .callbacks_nav.next {
     right:0;
     background-position: right top;
+    text-align:  right;
 }
 #slider3-pager a {
   display: inline-block;
@@ -461,7 +467,7 @@ ul.dropdown-menu {
     position: absolute;
     top: 76%;
     z-index: 999;
-    right: 48%;
+    right: 49%;
     padding: 0;
     margin: 0;
 }
@@ -738,7 +744,7 @@ span.thr{
 
 /*-- stats --*/
 .stats {
-       background: url(../images/02.jpg) no-repeat 0px 0px;
+       background: url(../images/girls.jpg) no-repeat 0px 0px;
        background-size: cover;
        -webkit-background-size: cover;
        -moz-background-size: cover;
@@ -747,7 +753,7 @@ span.thr{
        background-size: cover;
        position: relative;
        z-index: 1;
-       padding: 5em 0;
+       padding: 0em 0;
 }
 .stats-grid {
     text-align: center;
@@ -1050,7 +1056,7 @@ p.para-w3-agile {
 	padding:0;
 }
 .pr-ta {
-    background: #00466a;
+    background: #1f1f1f;
     padding: 20px;
 }
 /*-- //pricing --*/
@@ -1065,7 +1071,7 @@ p.para-w3-agile {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    padding: 5em 0;
+    padding: 5em 0 0;
 }
 .book-appointment h3 {
     text-align: center;
@@ -1635,6 +1641,7 @@ ul.con_inner_text.midimg li {
 /*-- //to-top --*/
 .agile-dish-caption {
     text-align: center;
+    display:  none;
 }
 /*-- responsive --*/
 @media(max-width:1440px){
